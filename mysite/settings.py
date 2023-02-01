@@ -20,14 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l6!vwqqzzot86^h-o2)s7mr67@t^407ay2n#h=oi7nvl5w6w+w'
+SECRET_KEY = 'django-insecure-4ledb=&613v%*isq8d=$v1n)i4hchwq7r-*5wo(k)d7*+06-r='
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-SITE_ID = 1
 
 # Application definition
 
@@ -39,10 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'taggit',
-    'django.contrib.sites',
-    'django.contrib.sitemaps',
-    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -81,10 +76,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
-        'USER': 'blog',
-        'PASSWORD': '123456',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -130,9 +123,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# email server configuration
-EMAIL_HOST = 'smtp.cartoriomagalhaes.com.br'
-EMAIL_HOST_USER = 'ti@cartoriomagalhaes.com.br'
-EMAIL_HOST_PASSWORD = 'T3cn01ogI@120304'
+#email server configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'mr.martinsiss@gmail.com'
+EMAIL_HOST_PASSWORD = 'vcxoyjvegjpdmvuj'
 EMAIL_PORT = 587
-EMAIL_USE_TLS = False
+EMAIL_USE_TLS = True
